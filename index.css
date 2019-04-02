@@ -1,274 +1,74 @@
-body
-{
-	background: #282828;/* match border color */
-	text-align: center;
-}
-a
-{
-	text-decoration: none;
-}
-div
-{
-	float: left;
-}
-h1
-{
-	margin: 0;
-}
-.logo
-{
-	margin-left: 10px;
-	font: 60px 'Arial Narrow', sans-serif;
-	color: #fefefe;
-	text-transform: uppercase;
-	letter-spacing: -4px;
-}
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    menu.css                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vdelgado <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/03/26 10:40:42 by vdelgado          #+#    #+#              #
+#    Updated: 2019/03/29 12:17:54 by vdelgado         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-/* stuff for both words */
-.logo span
+BODY
+{
+	background-color: pink; !important
+}
+UL
+{
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+UL.menu > LI
 {
 	position: relative;
+	float: left;
+	margin: 1px;
 }
-.logo span:before,
-.logo span:after
+UL.menu > LI > A
 {
-	content: '';
-	position: absolute;
-	border-width: 32px;/* makes a nice, big 64px square */
-	border-style: solid;
-	border-color: transparent;
-	height: 0;
-	z-index: 10;
-}
-
-/* stuff for 1st word */
-.logo .word1
-{
-	color: #dc006c;
-	margin-right: -22px;
-	transform: rotateY(180deg);/* using Prefix free */
-	display: inline-block;/* required for transform */
-	z-index: 10;/* stack 1st word on top */
-}
-.logo .word1:before
-{
-	right: -18px;/* would be left, but we flipped the word */
-	top: -16px;
-	border-top-color: #282828;/* match background color */
-	border-right-color: #282828;/* would be left, but we flipped the word */
-}
-.logo .word1:after
-{
-	left: 10px;/* would be right, but we flipped the word */
-	bottom: -25px;
-	border-bottom-color: #282828;
-	border-left-color: #282828;/* would be right, but we flipped the word */
-}
-
-/* stuff for 2nd word */
-.logo .word2
-{
-	z-index: 0;/* stack 2nd word below */
-}
-.logo .word2:before
-{
-	left: -24px;
-	top: -10px;
-	border-top-color: #282828;
-	border-left-color: #282828;
-}
-.logo .word2:after
-{
-	right: -32px;	
-	bottom: 2px;
-	border-bottom-color: #282828;
-	border-right-color: #282828;
-}
-.button
-{
-	float: right;
-	background-color: #dc006c;
-	border: none;
-	color: white;
-	padding: 14px 30px;
-	text-align: center;
-	font-size: 26px;
-	margin: 4px 2px;
-	margin-top: 9px;
-	transition: 0.3s;
-	display: inline-block;
+	display: block;
 	text-decoration: none;
-	cursor: pointer;
+	background-color: black;
+	text-align: center;
+	padding: 10px 15px 10px 15px;
+	font-size: 2.3vw;
+	color: white;
 	border-radius: 5px;
 }
-
-.button:hover
+UL.menu > LI > A:hover
 {
-	background-color: #ff1a88;
+	background-color: gray;
 }
-#search
+UL.submenu
 {
-	width: 100%;
-	border-radius: 2px;
-	float: right;
-	padding: 6px;
-	border: none;
-	margin-top: 15px;
-	margin-right: 16px;
-	font-size: 26px;
+    display: none;
+    position: absolute;
+    width: 98%;
+    top: 4vh;
+    left: 0;
+    border: 1px solid black;
 }
-#searchdiv
+UL.submenu > LI
 {
-	width: 43%;
+    display: block;
 }
-.topelem
+UL.submenu > LI > A
 {
-	margin-right: 70px;
-	width: 18%;
+    display: block;
+    padding: 10px;
+    color: black;
+    background-color: gray;
+    text-decoration: none;
+	font-size: 1.5vw;
 }
-.topbar
+UL.submenu > LI > A:hover
 {
-	width: 100%;
+    text-decoration: underline;
 }
-#buttons
+UL.menu > LI:hover > UL.submenu
 {
-	width:25%;
-}
-.hidden
-{
-	visibility: hidden;
-}
-.sectiontitle
-{
-	color: white;
-	margin 10px;
-}
-.inp
-{
-	font-size: 20px;
-	border-radius: 2px;
-	margin 5px;
-	width: 24%;
-}
-.medium
-{
-	width: 38%;
-}
-.confirm
-{
-	background-color: #009900;
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-decoration: none;
-	margin: 10px 2px;
-	cursor: pointer;
-	border-radius: 2px;
-}
-#basket
-{
-	width: 100px;
-	height: 100px;
-}
-table
-{
-	margin-top: 20px;
-	border-collapse: collapse;
-	width: 100%;
-}
-
-th, td
-{
-	height: 100%;
-	color: white;
-	padding: 8px;
-	text-align: left;
-	border-bottom: 1px solid #ddd;
-}
-tr:hover
-{
-	background-color: #cc6699;
-}
-.main
-{
-	width: 100%;
-}
-.checkout
-{
-	display: inline-block;
-	border-radius: 4px;
-	background-color: #00b300;
-	border: none;
-	color: #FFFFFF;
-	text-align: center;
-	font-size: 28px;
-	padding: 20px;
-	width: 200px;
-	transition: all 0.5s;
-	cursor: pointer;
-	margin: 20px;
-}
-
-.checkout span
-{
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	transition: 0.5s;
-}
-
-.checkout span:after
-{
-	content: '\00bb';
-	position: absolute;
-	opacity: 0;
-	top: 0;
-	right: -20px;
-	transition: 0.5s;
-}
-.right
-{
-	width: 80%;
-}
-.checkout:hover span
-{
-	padding-right: 25px;
-}
-.checkout:hover span:after
-{
-	opacity: 1;
-	right: 0;
-}
-.boxed
-{
-	border: 5px solid white;
-	text: red;
-}
-.pen {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-
-.price {
-  color: grey;
-  font-size: 22px;
-}
-
-.pen button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.pen button:hover {
-  opacity: 0.7;
+    display: block;
 }
