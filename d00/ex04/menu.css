@@ -1,0 +1,75 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    menu.css                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vdelgado <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/03/26 10:40:42 by vdelgado          #+#    #+#              #
+#    Updated: 2019/03/26 11:30:31 by vdelgado         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+BODY
+{
+	margin: 0;
+	padding: 0;
+	background-color: pink;
+}
+UL
+{
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+UL.menu > LI
+{
+	position: relative;
+	float: left;
+	margin: 1px;
+}
+UL.menu > LI > A
+{
+	display: block;
+	text-decoration: none;
+	background-color: #b58b2b;
+	text-align: center;
+	padding: 10px 15px 10px 15px; 
+	font-size: 15px;
+	color: #681201;
+	border-radius: 5px;
+}
+UL.menu > LI > A:hover
+{
+	background-color: #016b16;
+}
+UL.submenu
+{
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 37px;
+    left: 0;
+    border: 1px solid black;
+}
+UL.submenu > LI
+{
+    display: block;
+}
+UL.submenu > LI > A
+{
+    display: block;
+    padding: 10px;
+    color: black;
+    background-color: #d8cb0f;
+    text-decoration: none;
+}
+UL.submenu > LI > A:hover
+{
+    text-decoration: underline;
+}
+UL.menu > LI:hover > UL.submenu
+{
+    display: block;
+}
